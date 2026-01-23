@@ -1,0 +1,621 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.bg {
+    position: fixed;
+    inset: 0;
+    background: url("ram-bg.jpg") center/cover no-repeat;
+    z-index: -2;
+}
+
+ .overlay {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at top, rgba(255, 200, 120, 0.18), rgba(0, 0, 0, 0.9));
+    z-index: -1;
+}
+
+.particle {
+    position: fixed;
+    font-family: 'Tiro Devanagari Hindi', serif;
+    color: #ffd700;
+    opacity: 0.6;
+    text-shadow: 0 0 14px rgba(255, 215, 0, 0.9);
+    animation: float 7s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes float {
+    from {
+        transform: translateY(100vh) scale(0.7);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(-10vh) scale(1.2);
+        opacity: 0.8;
+    }
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.hero-inner {
+    max-width: 900px;
+}
+
+.tagline {
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #bbb;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-family: 'Tiro Devanagari Hindi', serif;
+    font-size: 4rem;
+    letter-spacing: 4px;
+    color: #f5c46b;
+    animation: ramGlow 2s infinite alternate;
+}
+
+@keyframes ramGlow {
+    from {
+        text-shadow: 0 0 12px gold;
+    }
+
+    to {
+        text-shadow: 0 0 40px gold;
+    }
+}
+
+.hero p {
+    margin: 18px auto 25px;
+    max-width: 650px;
+    font-size: 1.1rem;
+    color: #ddd;
+}
+
+.discord-btn {
+    display: inline-flex;
+    position: relative;
+     /* top: 100px; */
+     /* left: -238px; */
+    left: 200px;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 36px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #ffb347, #ffd700);
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 0 35px rgba(255, 200, 120, 0.6);
+    transition: 0.35s;
+}
+
+.discord-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 60px rgba(255, 200, 120, 1);
+}
+
+.stats {
+    margin: 20px auto 8px;
+    position: relative;
+    top: 62px;
+    left: -52px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 24px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(10px);
+    font-size: 14px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background: #ffd700;
+    border-radius: 50%;
+    box-shadow: 0 0 12px #ffd700;
+    animation: pulse 1.5s infinite;
+}
+
+.link {
+    font-size: 13px;
+    color: #aaa;
+    position: relative;
+    top: 100px;
+    left: -238px;
+    text-decoration: none !important;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.4;
+    }
+}
+
+.info-buttons {
+    margin-top: 40px;
+    position: relative;
+    top: 70px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.info {
+    padding: 14px 28px;
+    border-radius: 16px;
+    background: rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255, 200, 120, 0.5);
+    color: #ffd700;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.35s;
+    box-shadow: 0 0 20px rgba(255, 200, 120, 0.2);
+}
+    .info i {
+    font-size: 18px;
+    transition: 0.35s;
+}
+
+.info.crown i {
+    color: #ffb347;
+    text-shadow: 0 0 12px rgba(255, 180, 71, 0.9);
+}
+
+
+.info.tools i {
+    color: #ff6a6a;
+    text-shadow: 0 0 12px rgba(255, 106, 106, 0.9);
+}
+
+
+.info.shield i {
+    color: #4ddcff;
+    text-shadow: 0 0 14px rgba(77, 220, 255, 0.9);
+}
+
+
+.info.artists i {
+    color: #7f7cff;
+    text-shadow: 0 0 14px rgba(127, 124, 255, 0.9);
+}
+
+
+.info:hover i {
+    color: #000 !important;
+    text-shadow: none;
+}
+.info:hover {
+    background: #ffd700;
+    color: #000;
+    box-shadow: 0 0 45px rgba(255, 200, 120, 1);
+    transform: translateY(-4px);
+}
+
+.about-ram {
+    padding: 90px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.ram-card {
+    max-width: 900px;
+    padding: 60px 40px;
+    border-radius: 26px;
+    background: linear-gradient(135deg, rgba(255, 180, 90, 0.14), rgba(120, 40, 0, 0.22));
+    backdrop-filter: blur(18px);
+    box-shadow: 0 0 80px rgba(255, 170, 70, 0.15);
+    text-align: center;
+}
+
+.ram-card h2 {
+    font-family: 'Tiro Devanagari Hindi', serif;
+    font-size: 3rem;
+    letter-spacing: 6px;
+    color: #f5c46b;
+    margin-bottom: 30px;
+}
+
+.ram-desc {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: #e0e0e0;
+    margin-bottom: 22px;
+}
+
+.hl {
+    color: #ffd27a;
+    text-shadow: 0 0 12px rgba(255, 210, 122, 0.7);
+}
+
+.ram-members {
+    margin: 30px 0;
+    font-size: 1.4rem;
+    color: #ffd27a;
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+}
+
+.ram-divider {
+    margin-top: 30px;
+    font-size: 2rem;
+    color: #ffd27a;
+}
+
+/* What we Offer */
+body{
+background:#000;
+color:#fff;
+font-family:'Poppins',sans-serif;
+}
+
+/* SECTION */
+.offer-section{
+padding:100px 0;
+background:radial-gradient(circle at top, rgba(255,200,120,0.12), #000 70%);
+}
+
+/* HEADING */
+.offer-title{
+font-family:'Tiro Devanagari Hindi',serif;
+color:#f5c46b;
+letter-spacing:3px;
+text-shadow:0 0 25px rgba(255,200,120,0.6);
+}
+
+.offer-subtitle{
+max-width:700px;
+margin:15px auto 60px;
+color:#bbb;
+}
+
+/* CARD */
+.offer-card{
+background:rgba(255,255,255,0.04);
+border:1px solid rgba(255,200,120,0.25);
+border-radius:18px;
+padding:28px;
+height:100%;
+transition:0.35s;
+box-shadow:0 0 25px rgba(255,200,120,0.1);
+}
+
+.offer-card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 50px rgba(255,200,120,0.6);
+border-color:#ffd700;
+}
+
+/* ICON */
+.offer-icon{
+font-size:34px;
+color:#ffd700;
+margin-bottom:18px;
+text-shadow:0 0 15px gold;
+}
+
+/* TAG */
+.offer-tag{
+display:inline-block;
+font-size:12px;
+padding:6px 14px;
+border-radius:20px;
+background:rgba(255,200,120,0.15);
+color:#ffd700;
+margin-bottom:12px;
+}
+
+/* TITLE */
+.offer-card h5{
+font-weight:600;
+margin-bottom:10px;
+}
+
+/* TEXT */
+.offer-card p{
+font-size:14px;
+color:#ccc;
+}
+
+/* STATS  */
+body{
+    background:#000;
+    color:#fff;
+    font-family:'Poppins',sans-serif;
+}
+
+    /* SECTION */
+.stats-section{
+    padding:100px 20px;
+    text-align:center;
+}
+
+.stats-title{
+    font-family:'Tiro Devanagari Hindi', serif;
+    font-size:3rem;
+    letter-spacing:4px;
+    color:#f5c46b;
+    margin-bottom:12px;
+    text-shadow:0 0 25px rgba(255,215,0,.6);
+}
+
+.stats-subtitle{
+    color:#bbb;
+    max-width:600px;
+    margin:0 auto 60px;
+    font-size:1.05rem;
+}
+
+    /* CARD */
+.stat-card{
+    background:rgba(255, 255, 255, 0.04);
+
+    border-radius:22px;
+    padding:45px 30px;
+    box-shadow:0 0 60px rgba(255,170,70,.25);
+    transition:.4s;
+    height:100%;
+}
+
+.stat-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 90px rgba(255,200,100,.8);
+}
+
+.stat-icon{
+    font-size:3rem;
+    color:#ffd27a;
+    margin-bottom:20px;
+    text-shadow:0 0 25px gold;
+}
+
+.stat-number{
+    font-size:3.2rem;
+    font-weight:700;
+    color:#ffd700;
+    text-shadow:0 0 20px gold;
+}
+
+.stat-label{
+    margin-top:10px;
+    font-size:1.2rem;
+    font-weight:600;
+}
+
+.stat-desc{
+    font-size:.95rem;
+    color:#ccc;
+    margin-top:6px;
+}
+
+    /* FOOTER SECTION */
+.footer-cta{
+    padding:120px 20px 60px;
+    text-align:center;
+    position:relative;
+}
+
+.footer-title{
+    font-family:'Tiro Devanagari Hindi', serif;
+    font-size:3.2rem;
+    letter-spacing:4px;
+    color:#f5c46b;
+    text-shadow:0 0 25px rgba(255,215,0,.6);
+}
+
+.footer-desc{
+    color:#bbb;
+    max-width:600px;
+    margin:18px auto 35px;
+    font-size:1.05rem;
+}
+
+
+.join-btn{
+    display:inline-block;
+    padding:16px 42px;
+    border-radius:50px;
+    background:linear-gradient(135deg,#ffb347,#ffd700);
+    color:#000;
+    font-weight:700;
+    text-decoration:none;
+    box-shadow:0 0 35px rgba(255,200,120,.7);
+    transition:.35s;
+}
+
+.join-btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 0 65px rgba(255,215,0,1);
+}
+
+
+.discord-link{
+    margin-top:14px;
+    font-size:14px;
+    color:#aaa;
+}
+
+
+.social-icons{
+    margin:30px 0;
+    display:flex;
+    justify-content:center;
+    gap:28px;
+}
+
+.social-icons a{
+    font-size:22px;
+    color:#bbb;
+    transition:.35s;
+}
+
+
+.social-icons a.instagram:hover{ color:#E1306C; }
+.social-icons a.facebook:hover{ color:#1877F2; }
+.social-icons a.email:hover{ color:#04f404; }
+
+.footer-bottom{
+    margin-top:50px;
+    padding-top:20px;
+    border-top:1px solid rgba(255,255,255,.1);
+    font-size:13px;
+    color:#888;
+}
+
+/* MEDIA QUERY */
+@media (max-width: 769px) {
+
+    .discord-btn {
+        position: static;
+        margin: 25px auto 10px;
+        display: inline-flex;
+        left: auto;
+        transform: none;
+    }
+
+    .stats {
+        position: static;
+        margin: 15px auto 5px;
+        left: auto;
+        top: auto;
+        display: inline-flex;
+        justify-content: center;
+    }
+
+    .link {
+        position: static;
+        display: block;
+        margin: 6px auto 20px;
+        left: auto;
+        top: auto;
+        text-align: center;
+    }
+
+    .info-buttons {
+        position: static;
+        margin-top: 15px;
+        gap: 12px;
+        justify-content: center;
+    }
+
+    .info {
+        padding: 12px 22px;
+        font-size: 14px;
+    }
+}
+
+/* MOBILE PHONE */
+@media (max-width: 573px) {
+
+    .hero h1 {
+        font-size: 2.6rem;
+        letter-spacing: 2px;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .discord-btn {
+        padding: 14px 26px;
+        font-size: 15px;
+        border-radius: 14px;
+    }
+
+    .stats {
+        font-size: 13px;
+        padding: 8px 18px;
+        gap: 8px;
+    }
+
+    .dot {
+        width: 6px;
+        height: 6px;
+    }
+
+    .link {
+        font-size: 12px;
+    }
+
+    .info-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info {
+        width: 90%;
+        justify-content: center;
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 573px) {
+
+    .hero h1 {
+        font-size: 3rem;
+        letter-spacing: 2px;
+    }
+
+    .discord-btn {
+        padding: 15px 30px;
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    .stats {
+        font-size: 13.5px;
+        padding: 9px 20px;
+        margin-top: 12px;
+    }
+
+    .link {
+        font-size: 13px;
+        margin-top: 8px;
+    }
+
+    .info-buttons {
+        gap: 14px;
+        margin-top: 18px;
+    }
+
+    .info {
+        padding: 13px 26px;
+        font-size: 14.5px;
+    }
+}

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Ram Rajya</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Tiro+Devanagari+Hindi&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="icon" href="{% static 'img/icon2.png' %}">
+</head>
+
+<body>
+
+    <div class="bg"></div>
+    <div class="overlay"></div>
+
+    <script>
+        for (let i = 0; i < 30; i++) {
+            let p = document.createElement("div");
+            p.className = "particle";
+            p.innerText = "ॐ";
+            p.style.left = Math.random() * 100 + "vw";
+            p.style.fontSize = (Math.random() * 12 + 14) + "px";
+            p.style.animationDuration = (Math.random() * 5 + 6) + "s";
+            document.body.appendChild(p);
+        }
+    </script>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-md-11 text-center">
+
+                    <div class="hero-inner">
+                        <div class="tagline">Indian Community · Dharma · Unity · Peace</div>
+
+                        <h1 data-aos="zoom-in">RAM RAJYA</h1>
+
+                        <p data-aos="fade-up">
+                            A divine Discord community inspired by Dharma, discipline,
+                            culture and brotherhood.
+                        </p>
+
+                        <a href="https://discord.gg/ram" class="discord-btn">✨ Join Discord →</a>
+
+                        <div class="stats">
+                            <div class="dot"></div>
+                            1000+ Active · 10,000 Members
+                        </div>
+
+                        <a href="#" class="link">discord.gg/ram</a>
+
+                        <div class="info-buttons">
+                            <a href="/owner" class="info crown"><i class="fa-solid fa-crown"></i> Owner</a>
+                            <a href="{% url 'cards_list' %}" class="info tools"><i class="fa-solid fa-screwdriver-wrench"></i> Admin</a>
+                            <a href="{% url 'head_staff' %}" class="info tools"><i class="fa-solid fa-shield"></i> Head Staff</a>
+                            <a href="{% url 'staff_list' %}" class="info shield"><i class="fa-solid fa-screwdriver-wrench"></i> Staff</a>
+                            <a href="{% url 'artist_list' %}" class="info artists"><i class="fa-solid fa-infinity"></i> Artists</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about-ram" data-aos="fade-up">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-md-11">
+
+                    <div class="ram-card">
+                        <h2>RAM RAJYA</h2>
+
+                        <p class="ram-desc">
+                            is a <span class="hl">peaceful and disciplined</span> Indian-based Discord
+                            community inspired by <span class="hl">Dharma</span>,
+                            open to everyone across the world.
+                        </p>
+
+                        <div class="ram-members">
+                            <i class="fa-solid fa-users"></i>
+                            Join <strong>10,000+</strong> Members
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+
+                        <p class="ram-desc">
+                            in a space filled with
+                            <span class="hl">bhakti</span>,
+                            <span class="hl">knowledge</span>,
+                            and meaningful discussions.
+                        </p>
+
+                        <div class="ram-divider">ॐ</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Offer -->
+    <section class="offer-section text-center">
+        <div class="container">
+
+            <h2 class="offer-title mb-3">WHAT WE OFFER</h2>
+            <p class="offer-subtitle">
+                From gaming sessions to late-night chats, RAM-RAJYA offers everything you need for an unforgettable
+                community experience
+            </p>
+
+            <div class="row g-4">
+
+                <!-- CARD 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="offer-card text-start">
+                        <div class="offer-icon">🛕</div>
+                        <span class="offer-tag">Weekly Events</span>
+                        <h5>Events & Activities</h5>
+                        <p>
+                            Bhajans, Ramayan paths, spiritual discussions, and cultural
+                            gatherings that unite the community.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="offer-card text-start">
+                        <div class="offer-icon">🔔</div>
+                        <span class="offer-tag">Always Active</span>
+                        <h5>Active Voice Channels</h5>
+                        <p>
+                            24/7 peaceful voice channels for discussions, guidance,
+                            meditation, and friendly talks.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="offer-card text-start">
+                        <div class="offer-icon">🎮</div>
+                        <span class="offer-tag">Gaming Zone</span>
+                        <h5>Gaming Hub</h5>
+                        <p>
+                            Play games together, form squads, chill with friends, and enjoy
+                            fun gaming sessions with the community.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="offer-card text-start">
+                        <div class="offer-icon">🎁</div>
+                        <span class="offer-tag">Rewards</span>
+                        <h5>Giveaways & Rewards</h5>
+                        <p>
+                            Special divine roles, recognition, and rewards for active and
+                            disciplined members.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CARD 5 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="offer-card text-start">
+                        <div class="offer-icon">🤝</div>
+                        <span class="offer-tag">Community</span>
+                        <h5>Friendzone</h5>
+                        <p>
+                            Make genuine friendships, chill conversations, and connect with
+                            like-minded people in a safe space.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CARD 6 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="offer-card text-start">
+                        <div class="offer-icon">👥</div>
+                        <span class="offer-tag">Growing Family</span>
+                        <h5>10K+ Members</h5>
+                        <p>
+                            Join one of the most active and growing Indian Discord
+                            communities with members from all over.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CARD 7 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="offer-card text-start">
+                        <div class="offer-icon">🎵</div>
+                        <span class="offer-tag">Weekly Fun</span>
+                        <h5>Weekly Jamming</h5>
+                        <p>
+                            Enjoy music nights, singing sessions, and chill jamming with the
+                            Ram Rajya family.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CARD 8 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="offer-card text-start">
+                        <div class="offer-icon">🏆</div>
+                        <span class="offer-tag">Progress System</span>
+                        <h5>Level & Ranking System</h5>
+                        <p>
+                            Earn XP, unlock exclusive roles, and climb the leaderboard by
+                            staying active in the server.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CARD 9 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="offer-card text-start">
+                        <div class="offer-icon">✍️</div>
+                        <span class="offer-tag">Creativity</span>
+                        <h5>Shayari</h5>
+                        <p>
+                            Share your thoughts, emotions, and creativity through beautiful
+                            shayari and words.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats-section">
+        <div class="container">
+
+            <h2 class="stats-title">COMMUNITY STATS</h2>
+            <p class="stats-subtitle">
+                Join thousands of devotees in the ever-growing Ram Rajya digital community.
+            </p>
+
+            <div class="row g-4 justify-content-center">
+
+                <!-- CARD 1 -->
+                <div class="col-lg-5 col-md-6">
+                    <div class="stat-card">
+                        <div class="stat-icon">👥</div>
+                        <div class="stat-number" id="memberCounter">0</div>
+                        <div class="stat-label">Total Members</div>
+                        <div class="stat-desc">Growing Daily</div>
+                    </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="col-lg-5 col-md-6">
+                    <div class="stat-card">
+                        <div class="stat-icon">🌐</div>
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Always Active</div>
+                        <div class="stat-desc">Round the clock</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- FOOTER CTA -->
+    <section class="footer-cta">
+
+        <h1 class="footer-title">RAM RAJYA</h1>
+
+        <p class="footer-desc">
+            Where Good Vibes Meet Chills. Join the ultimate Indian Discord Community Today.
+        </p>
+
+        <a href="https://discord.gg/ram" target="_blank" class="join-btn">
+            Join 10K+ Members
+        </a>
+
+        <div class="discord-link">discord.gg/ram</div>
+
+        <!-- SOCIAL LINKS -->
+        <div class="social-icons">
+            <a href="#" class="instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="facebook" title="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="email" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer-bottom">
+            © 2026 <strong>RAM RAJYA</strong>. All rights reserved.<br>
+            Made with 🕉️ for the community
+        </div>
+
+    </section>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1200, once: true });
+    </script>
+
+    <script>
+        let count = 0;
+        let target = 10000;
+        let speed = 10;
+
+        const counter = document.getElementById("memberCounter");
+
+        const updateCounter = () => {
+            if (count < target) {
+                count += 50;
+                counter.innerText = count.toLocaleString() + "+";
+                setTimeout(updateCounter, speed);
+            } else {
+                counter.innerText = "10K+";
+            }
+        };
+
+        updateCounter();
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Staff</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- CSS -->
+<link rel="stylesheet" href="{% static 'owner.css' %}">
+</head>
+
+<body>
+
+<!-- BACK BUTTON -->
+<div class="rr-back-btn">
+    <a href="/"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+</div>
+
+<div class="container text-center mt-5">
+
+    <i class="fa-solid fa-crown fs-1 text-warning mb-3"></i>
+    <h1 class="rr-title">STAFF INFO</h1>
+    <p class="text-secondary mt-2">
+        Core members and trusted leaders of our community
+    </p>
+
+    <div class="row justify-content-center mt-5 g-4">
+
+        {% for staff in staffs %}
+        <!-- STAFF CARD -->
+        <div class="col-lg-3 col-md-6">
+            <div class="rr-owner-card"
+                 data-bs-toggle="modal"
+                 data-bs-target="#staffModal{{ staff.id }}">
+
+                <div class="rr-card-banner">
+                    <img src="{{ staff.banner_image.url }}" alt="Banner">
+                    <img src="{{ staff.profile_image.url }}" class="rr-profile-img">
+                </div>
+
+                <div class="rr-card-body text-start">
+                    <h6>{{ staff.name }}</h6>
+
+                    <!-- 🔥 TAGS ON CARD -->
+                    <div class="d-flex flex-wrap gap-1 mt-2">
+
+                        {% if staff.staff %}
+                            <span class="rr-role rr-founder">Staff</span>
+                        {% endif %}
+
+                        {% if staff.friendly %}
+                            <span class="rr-role rr-founder">Friendly</span>
+                        {% endif %}
+
+                        {% if staff.active_voice_channel %}
+                            <span class="rr-role rr-owner">Active Voice</span>
+                        {% endif %}
+
+                        {% if staff.active_message %}
+                            <span class="rr-role rr-dev">Active Message</span>
+                        {% endif %}
+
+                        {% if staff.moderator %}
+                            <span class="rr-role rr-og">Moderator</span>
+                        {% endif %}
+
+                        {% if staff.ticket_manager %}
+                            <span class="rr-role rr-owner">Ticket Manager</span>
+                        {% endif %}
+
+                        {% if staff.manager %}
+                            <span class="rr-role rr-dev">Manager</span>
+                        {% endif %}
+
+                    </div>
+
+                    <p class="text-muted small mt-2" style="color:white!important;">
+                        Trusted staff member contributing to community management.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- STAFF MODAL -->
+        <div class="modal fade"
+             id="staffModal{{ staff.id }}"
+             tabindex="-1"
+             aria-hidden="true">
+
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content bg-dark text-white rounded-4">
+
+                    <div class="modal-header border-0">
+                        <h5 class="modal-title">{{ staff.name }}</h5>
+                        <button type="button"
+                                class="btn-close btn-close-white"
+                                data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body text-center">
+
+                        <img src="{{ staff.profile_image.url }}"
+                             class="rounded-circle mb-3"
+                             width="130"
+                             height="130"
+                             style="object-fit: cover;">
+
+                        <!-- STAFF TAGS (MODAL) -->
+                        <div class="d-flex flex-wrap justify-content-center gap-2 mb-3">
+
+                            {% if staff.staff %}<span class="rr-role rr-founder">Staff</span>{% endif %}
+                            {% if staff.friendly %}<span class="rr-role rr-founder">Friendly</span>{% endif %}
+                            {% if staff.active_voice_channel %}<span class="rr-role rr-owner">Active Voice</span>{% endif %}
+                            {% if staff.active_message %}<span class="rr-role rr-dev">Active Message</span>{% endif %}
+                            {% if staff.moderator %}<span class="rr-role rr-og">Moderator</span>{% endif %}
+                            {% if staff.ticket_manager %}<span class="rr-role rr-owner">Ticket Manager</span>{% endif %}
+                            {% if staff.manager %}<span class="rr-role rr-dev">Manager</span>{% endif %}
+
+                        </div>
+
+                        <p class="text-secondary small">
+                            A trusted staff member responsible for supporting and maintaining the community.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+
+    <footer class="mt-5">
+        © 2026 COMMUNITY ™ · All Rights Reserved<br>
+        Built with ❤️
+    </footer>
+
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
