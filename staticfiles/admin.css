@@ -1,0 +1,154 @@
+body{
+    background:#000;
+    color:#fff;
+    font-family:'Poppins',sans-serif;
+}
+
+/* BACK */
+.rr-back-btn{
+    position:fixed;
+    top:20px;
+    left:20px;
+}
+.rr-back-btn a{
+    color:#ff9f00;
+    border:1px solid #ff9f00;
+    padding:8px 18px;
+    border-radius:20px;
+    text-decoration:none;
+    transition:.3s;
+}
+.rr-back-btn a:hover{
+    background:#ff9f00;
+    color:#000;
+    box-shadow:0 0 15px #ff9f00;
+}
+
+/* TITLE */
+.rr-title{
+    font-family:'Cinzel',serif;
+    color:#ff9f00;
+    text-shadow:0 0 25px rgba(255,159,0,.9);
+}
+
+/* CARD */
+.rr-owner-card{
+    background:rgba(0,0,0,.75);
+    border-radius:18px;
+    border:1px solid rgba(255,159,0,.45);
+    overflow:hidden;
+    transition:.4s;
+}
+.rr-owner-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 40px rgba(255,159,0,.8);
+}
+
+.rr-card-banner{
+    position:relative;
+    height:170px;
+}
+.rr-card-banner img,
+.rr-card-banner video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.rr-profile-img{
+    position:absolute;
+    bottom:-35px;
+    left:18px;
+    width:75px;
+    height:75px;
+    border-radius:50%;
+    border:3px solid #ff9f00;
+    box-shadow:0 0 20px #ff9f00;
+}
+
+.rr-card-body{
+    padding:55px 18px 20px;
+}
+
+/* TAGS */
+.rr-role{
+    display:inline-block;
+    font-size:11px;
+    padding:6px 12px;
+    border-radius:20px;
+    background:#ff9f00;
+    color:#000;
+    margin:4px 4px 0 0;
+    box-shadow:0 0 10px #ff9f00;
+}
+
+.rr-tag-btn{
+    margin-top:12px;
+    background:none;
+    border:1px solid #ff9f00;
+    color:#ff9f00;
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:12px;
+}
+
+/* MODAL */
+.rr-modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.85);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+}
+
+.rr-modal-content{
+    background:#111;
+    border-radius:20px;
+    padding:30px;
+    width:90%;
+    max-width:420px;
+    border:1px solid #ff9f00;
+    box-shadow:0 0 40px #ff9f00;
+    text-align:center;
+}
+
+/* CATEGORY */
+.rr-category-box{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin:15px 0;
+}
+.rr-category-box label{
+    color:#ffd700;
+    font-size:14px;
+}
+
+/* CHECKBOX TAGS */
+.rr-tag-checkboxes{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+    margin-top:15px;
+}
+.rr-tag-check{
+    font-size:13px;
+    color:#ffd700;
+    display:flex;
+    gap:6px;
+}
+.rr-tag-check input{
+    accent-color:#ff9f00;
+}
+
+/* CLOSE */
+.rr-close-btn{
+    background:#ff9f00;
+    color:#000;
+    border:none;
+    padding:8px 22px;
+    border-radius:20px;
+    box-shadow:0 0 15px #ff9f00;
+}

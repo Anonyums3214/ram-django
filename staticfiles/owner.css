@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background:#000;
+    color:#fff;
+    font-family:'Poppins',sans-serif;
+}
+
+
+.rr-back-btn{
+    position:absolute;
+    top:20px;
+    left:20px;
+}
+.rr-back-btn a{
+    color:#ff0066;
+    border:1px solid #ff0066;
+    padding:8px 18px;
+    border-radius:20px;
+    text-decoration:none;
+    transition:.3s;
+}
+.rr-back-btn a:hover{
+    background:#ff0066;
+    color:#000;
+    box-shadow:0 0 15px #ff0066;
+}
+
+
+.rr-title{
+    font-family:'Cinzel',serif;
+    color:#ff9f00;
+    text-shadow:0 0 25px rgba(255,159,0,.9);
+}
+
+
+.rr-owner-card{
+    background:rgba(0,0,0,.75);
+    border-radius:18px;
+    border:1px solid rgba(255,159,0,.45);
+    overflow:hidden;
+    transition:.4s;
+}
+.rr-owner-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 45px rgba(255,159,0,.8);
+}
+
+.rr-card-banner{
+    position:relative;
+    height:170px;
+    background:#111;
+}
+.rr-card-banner img,
+.rr-card-banner video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter:brightness(.85);
+}
+
+.rr-profile-img{
+    position:absolute;
+    bottom:-38px;
+    left:18px;
+    width:75px;
+    height:75px;
+    border-radius:50%;
+    border:3px solid #ff9f00;
+    background:#000;
+    width: 47% !important;   /* ADD */
+    height: 52% !important;     /* ADD */
+    object-fit:cover;
+    box-shadow:0 0 22px #ff9f00;
+}
+
+.rr-card-body{
+    padding:55px 18px 20px;
+}
+
+.rr-role{
+    display:inline-block;
+    font-size:11px;
+    padding:6px 12px;
+    border-radius:20px;
+    margin:4px 4px 0 0;
+    font-weight:500;
+}
+
+.rr-founder{
+    background:#ff9f00;
+    color:#000;
+    box-shadow:0 0 15px #ff9f00;
+}
+.rr-owner{
+    background:#8e2de2;
+    color:#fff;
+    box-shadow:0 0 15px #8e2de2;
+}
+.rr-dev{
+    background:#00c6ff;
+    color:#000;
+    box-shadow:0 0 15px #00c6ff;
+}
+.rr-og{
+    background:#ff0055;
+    color:#fff;
+    box-shadow:0 0 15px #ff0055;
+}
+
+footer{
+    color:#777;
+    font-size:14px;
+    margin-top:80px;
+}
