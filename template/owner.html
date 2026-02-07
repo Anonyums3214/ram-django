@@ -2,27 +2,27 @@
 <html lang="en">
 <head>
     {% load static %}
-<meta charset="UTF-8">
-<title>Ram Rajya | Owners</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Ram Rajya | Owners</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- Bootstrap -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- Font Awesome -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
-<!-- Links -->
-<link rel="stylesheet" href="{% static 'owner.css' %}">
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'owner.css' %}">
     <link rel="icon" href="{% static 'img/icon2.png' %}">
 </head>
 
 <body>
 
-<!-- BACK -->
+<!-- BACK BUTTON -->
 <div class="rr-back-btn">
     <a href="/"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
 </div>
@@ -35,65 +35,22 @@
         Meet the supreme leaders who built and maintain this legendary community
     </p>
 
+    <!-- OWNERS ROW -->
     <div class="row justify-content-center mt-5 g-4">
 
-        <!-- OWNER CARD 1 -->
-        <div class="col-lg-3 col-md-6">
-            <div class="rr-owner-card">
-                <div class="rr-card-banner">
-                    <!-- Replace with video if needed -->
-                    <img src="{% static 'img/R4ku_banner.gif' %}">
-                    <img src="{% static 'img/R4ku.png' %}" class="rr-profile-img">
-                </div>
-                <div class="rr-card-body text-start">
-                    <h6>R4KU</h6>
-                    <p class="text-warning small mb-2">OWNER & OG</p>
-                    <p class="text-muted small" style="color: white !important;">
-                        Founder and supreme leader of Ram Rajya.
-                    </p>
-                    <div>
-                        <span class="rr-role rr-founder">Founder</span>
-                        <span class="rr-role rr-owner">Owner</span>
-                        <span class="rr-role rr-og">Supreme Leader</span>
-                        <span class="rr-role rr-owner">OG</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- OWNER CARD 2 -->
-        <div class="col-lg-3 col-md-6">
-            <div class="rr-owner-card">
-                <div class="rr-card-banner">
-                    <img src="{% static 'img/adi_banner.gif' %}">
-                    <a href="https://sauravhere.carrd.co/"><img src="{% static 'img/adi.png' %}" class="rr-profile-img"></a>
-                </div>
-                <div class="rr-card-body text-start">
-                    <h6>ADI</h6>
-                    <p class="text-warning small mb-2">OWNER & OG</p>
-                    <p class="text-muted small" style="color: #fff !important;">
-                        Manages structure, systems & growth.
-                    </p>
-                    <div>
-                        <span class="rr-role rr-owner">OWNER</span>
-                        <span class="rr-role rr-dev">Graphic Designer</span>
-                        <span class="rr-role rr-og">Ram Rajya OG</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- OWNER CARD 3 -->
+        <!-- OWNER 1 : AAKSHU -->
         <div class="col-lg-3 col-md-6">
             <div class="rr-owner-card">
                 <div class="rr-card-banner">
                     <img src="{% static 'img/aakshu_banner1.gif' %}">
-                    <a href="https://aakshuhere.carrd.co/"><img src="{% static 'img/aakshu.jpg' %}" class="rr-profile-img"></a>
+                    <a href="https://aakshuhere.carrd.co/">
+                        <img src="{% static 'img/aakshu.jpg' %}" class="rr-profile-img">
+                    </a>
                 </div>
                 <div class="rr-card-body text-start">
                     <h6>Aakshu</h6>
                     <p class="text-warning small mb-2">OWNER & OG</p>
-                    <p class="text-muted small" style="color: #fff !important;">
+                    <p class="text-muted small" style="color:#fff !important;">
                         Discipline, moderation & stability guardian.
                     </p>
                     <div>
@@ -106,7 +63,54 @@
             </div>
         </div>
 
-        <!-- OWNER CARD 4 -->
+        <!-- OWNER 2 : ADI -->
+        <div class="col-lg-3 col-md-6">
+            <div class="rr-owner-card">
+                <div class="rr-card-banner">
+                    <img src="{% static 'img/adi_banner.gif' %}">
+                    <a href="https://sauravhere.carrd.co/">
+                        <img src="{% static 'img/adi.png' %}" class="rr-profile-img">
+                    </a>
+                </div>
+                <div class="rr-card-body text-start">
+                    <h6>ADI</h6>
+                    <p class="text-warning small mb-2">OWNER & OG</p>
+                    <p class="text-muted small" style="color:#fff !important;">
+                        Manages structure, systems & growth.
+                    </p>
+                    <div>
+                        <span class="rr-role rr-owner">Owner</span>
+                        <span class="rr-role rr-dev">Graphic Designer</span>
+                        <span class="rr-role rr-og">Ram Rajya OG</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- OWNER 3 : SUKANA -->
+        <div class="col-lg-3 col-md-6">
+            <div class="rr-owner-card">
+                <div class="rr-card-banner">
+                    <!-- Replace images when Sukana assets are available -->
+                    <img src="{% static 'img/adi_banner.gif' %}">
+                    <img src="{% static 'img/adi.png' %}" class="rr-profile-img">
+                </div>
+                <div class="rr-card-body text-start">
+                    <h6>Sukana</h6>
+                    <p class="text-warning small mb-2">OWNER & OG</p>
+                    <p class="text-muted small" style="color:#fff !important;">
+                        Strategy, operations & internal management.
+                    </p>
+                    <div>
+                        <span class="rr-role rr-owner">Owner</span>
+                        <span class="rr-role rr-dev">Operations</span>
+                        <span class="rr-role rr-og">Ram Rajya OG</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- OWNER 4 : CHEEKU -->
         <div class="col-lg-3 col-md-6">
             <div class="rr-owner-card">
                 <div class="rr-card-banner">
@@ -116,7 +120,7 @@
                 <div class="rr-card-body text-start">
                     <h6>Cheeku</h6>
                     <p class="text-warning small mb-2">OWNER & OG</p>
-                    <p class="text-muted small" style="color: #fff !important;">
+                    <p class="text-muted small" style="color:#fff !important;">
                         Expansion & community engagement.
                     </p>
                     <div>
@@ -127,11 +131,16 @@
                 </div>
             </div>
         </div>
+
     </div>
+
+    <!-- FOOTER -->
     <footer class="mt-5">
         © 2026 RAM RAJYA ™ · All Rights Reserved<br>
         Built with Dharma 🕉️
     </footer>
+
 </div>
+
 </body>
 </html>
