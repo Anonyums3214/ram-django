@@ -3,15 +3,21 @@ from django.db import models
 # Create your models here.
 class UserCard(models.Model):
     name = models.CharField(max_length=200)
-    profile_image = models.ImageField(upload_to='profiles/')  
-    banner_image = models.ImageField(upload_to='banners/')    
+    profile_image = models.ImageField(upload_to='profiles/')
+    banner_image = models.ImageField(upload_to='banners/')
 
     ROLE_CHOICES = [
         ('admin', 'Admin'),
         ('chief', 'Chief'),
-        ('member', 'Member'),  
+        ('high_court', 'High Court'),
+        ('member', 'Member'),
     ]
-    role = models.CharField(max_length=10, choices=ROLE_CHOICES, default='member')
+
+    role = models.CharField(
+        max_length=20,
+        choices=ROLE_CHOICES,
+        default='member'
+    )
 
     # Tags as checkboxes
     friendly = models.BooleanField(default=False)

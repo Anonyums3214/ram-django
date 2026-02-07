@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>User Cards</title>
+<title>ADMIN INFO</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Bootstrap -->
@@ -18,9 +18,10 @@
 <link rel="stylesheet" href="{% static 'owner.css' %}">
 
 <style>
-.rr-role-role { background-color: #ffc107; color: black; }  
-.rr-role-chief { background-color: #0d6efd; color: white; } 
-.rr-role-member { background-color: #6c757d; color: white; } 
+.rr-role-admin { background-color: #ffc107; color: black; }
+.rr-role-chief { background-color: #0d6efd; color: white; }
+.rr-role-high { background-color: #dc3545; color: white; }
+.rr-role-member { background-color: #6c757d; color: white; }
 </style>
 </head>
 
@@ -46,17 +47,21 @@
                     <img src="{{ card.banner_image.url }}" alt="Banner">
                     <img src="{{ card.profile_image.url }}" class="rr-profile-img">
                 </div>
+
                 <div class="rr-card-body text-start">
                     <h6>{{ card.name }}</h6>
+
                     {% if card.role == 'admin' %}
-                        <span class="rr-role rr-role-role">Admin</span>
+                        <span class="rr-role rr-role-admin">Admin</span>
                     {% elif card.role == 'chief' %}
                         <span class="rr-role rr-role-chief">Chief</span>
+                    {% elif card.role == 'high_court' %}
+                        <span class="rr-role rr-role-high">High Court</span>
                     {% else %}
                         <span class="rr-role rr-role-member">Member</span>
                     {% endif %}
 
-                    <p class="text-muted small mt-2" style="color: white !important;">
+                    <p class="text-muted small mt-2" style="color:white !important;">
                         Member of the Official community with assigned roles.
                     </p>
 
