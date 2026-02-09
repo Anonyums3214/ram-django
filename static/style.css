@@ -620,10 +620,10 @@ body{
     }
 }
 
-/* GAMING */
+/* GAMING ZONE */
 .gaming-zone{
     padding:100px 0;
-    background:radial-gradient(circle at top, #0b0f1a, #05070d);
+    background: radial-gradient(circle at top, #0b0f1a, #05070d);
 }
 
 .gaming-title{
@@ -645,16 +645,17 @@ body{
     border-radius:20px;
     overflow:hidden;
     display:block;
-    background-size:contain;
     background-position:center;
     background-repeat:no-repeat;
+    background-size:100% 100%;
     background-color:#0c0f16;
     border:1px solid rgba(255,255,255,.08);
     transition:.4s;
     text-decoration:none;
 }
 
-.game-card:hover{
+/* HOVER ONLY FOR ACTIVE */
+.game-card:not(.coming-soon):hover{
     transform:scale(1.07);
     box-shadow:0 0 45px rgba(0,255,240,.6);
 }
@@ -673,6 +674,7 @@ body{
 .game-overlay h4{
     font-weight:700;
     letter-spacing:1px;
+    color:#fff;
 }
 
 .game-overlay span{
@@ -680,45 +682,64 @@ body{
     color:#00fff0;
 }
 
-/* COMING SOON */
+/* COMING SOON BLOCK */
 .coming-soon{
-    opacity:.7;
-    filter:grayscale(.7);
+    pointer-events:none;
+    cursor:not-allowed;
+    opacity:0.6;
+    filter:grayscale(1);
+}
+
+/* COMING SOON LOCK BADGE */
+.coming-soon::after{
+    content:"🔒 COMING SOON";
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    background:rgba(0,0,0,.75);
+    color:#00fff0;
+    padding:10px 18px;
+    border-radius:30px;
+    font-size:.85rem;
+    letter-spacing:1px;
+    box-shadow:0 0 15px rgba(0,255,240,.6);
+    z-index:5;
 }
 
 /* GAME BACKGROUNDS */
 .freefire{
-    background-image: url(img/free.gif);
+    background-image:url("img/free.gif");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 .bgmi{
-    background-image: url(img/BGMI.gif);
+    background-image:url("img/BGMI.gif");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 .valorant{
-    background-image: url(img/valo.gif);
+    background-image:url("img/valo.gif");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 .cod{
-    background-image: url(img/cod.gif);
+    background-image:url("img/cod.gif");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 .gta{
-    background-image: url(img/GTA5.gif);
+    background-image:url("img/GTA5.gif");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 .minecraft{
-    background-image: url(img/minecraft.gif);
+    background-image:url("img/minecraft.gif");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
