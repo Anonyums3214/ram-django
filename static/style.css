@@ -619,3 +619,107 @@ body{
         font-size: 14.5px;
     }
 }
+
+/* GAMING */
+.gaming-zone{
+    padding:100px 0;
+    background:radial-gradient(circle at top, #0b0f1a, #05070d);
+}
+
+.gaming-title{
+    font-size:2.8rem;
+    font-weight:700;
+    color:#00fff0;
+    text-shadow:0 0 25px rgba(0,255,240,.8);
+}
+
+.gaming-subtitle{
+    color:#aaa;
+    margin-bottom:60px;
+}
+
+/* GAME CARD */
+.game-card{
+    position:relative;
+    height:230px;
+    border-radius:20px;
+    overflow:hidden;
+    display:block;
+    background-size:contain;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-color:#0c0f16;
+    border:1px solid rgba(255,255,255,.08);
+    transition:.4s;
+    text-decoration:none;
+}
+
+.game-card:hover{
+    transform:scale(1.07);
+    box-shadow:0 0 45px rgba(0,255,240,.6);
+}
+
+/* OVERLAY */
+.game-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to top, rgba(0,0,0,.9), rgba(0,0,0,.15));
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    padding:18px;
+}
+
+.game-overlay h4{
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.game-overlay span{
+    font-size:.9rem;
+    color:#00fff0;
+}
+
+/* COMING SOON */
+.coming-soon{
+    opacity:.7;
+    filter:grayscale(.7);
+}
+
+/* GAME BACKGROUNDS */
+.freefire{
+    background-image: url(img/free.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.bgmi{
+    background-image: url(img/BGMI.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.valorant{
+    background-image: url(img/valo.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.cod{
+    background-image: url(img/cod.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.gta{
+    background-image: url(img/GTA5.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.minecraft{
+    background-image: url(img/minecraft.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
