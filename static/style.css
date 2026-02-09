@@ -626,16 +626,23 @@ body{
     background: radial-gradient(circle at top, #0b0f1a, #05070d);
 }
 
+/* GOLDEN TITLE (RAM RAJYA STYLE) */
 .gaming-title{
     font-size:2.8rem;
-    font-weight:700;
-    color:#00fff0;
-    text-shadow:0 0 25px rgba(0,255,240,.8);
+    font-weight:800;
+    letter-spacing:2px;
+    color:#ffd700;
+    text-shadow:
+        0 0 10px rgba(255,215,0,0.8),
+        0 0 25px rgba(255,165,0,0.9),
+        0 0 50px rgba(255,140,0,0.8);
 }
 
+/* SUBTITLE */
 .gaming-subtitle{
-    color:#aaa;
+    color:#cfcfcf;
     margin-bottom:60px;
+    font-size:1.05rem;
 }
 
 /* GAME CARD */
@@ -649,34 +656,41 @@ body{
     background-repeat:no-repeat;
     background-size:100% 100%;
     background-color:#0c0f16;
-    border:1px solid rgba(255,255,255,.08);
-    transition:.4s;
+    border:1px solid rgba(255,215,0,.25);
+    transition:0.4s ease;
     text-decoration:none;
 }
 
 /* HOVER ONLY FOR ACTIVE */
 .game-card:not(.coming-soon):hover{
     transform:scale(1.07);
-    box-shadow:0 0 45px rgba(0,255,240,.6);
+    box-shadow:
+        0 0 25px rgba(255,215,0,0.8),
+        0 0 45px rgba(255,140,0,0.9);
 }
 
 /* OVERLAY */
 .game-overlay{
     position:absolute;
     inset:0;
-    background:linear-gradient(to top, rgba(0,0,0,.9), rgba(0,0,0,.15));
+    background:linear-gradient(to top, rgba(0,0,0,.95), rgba(0,0,0,.2));
     display:flex;
     flex-direction:column;
     justify-content:flex-end;
     padding:18px;
 }
 
+/* CARD TITLE GOLD */
 .game-overlay h4{
     font-weight:700;
-    letter-spacing:1px;
-    color:#fff;
+    letter-spacing:1.2px;
+    color:#ffd700;
+    text-shadow:
+        0 0 8px rgba(255,215,0,0.8),
+        0 0 18px rgba(255,165,0,0.8);
 }
 
+/* STATUS TEXT */
 .game-overlay span{
     font-size:.9rem;
     color:#00fff0;
@@ -690,20 +704,22 @@ body{
     filter:grayscale(1);
 }
 
-/* COMING SOON LOCK BADGE */
+/* COMING SOON BADGE (GOLD LOCK) */
 .coming-soon::after{
     content:"🔒 COMING SOON";
     position:absolute;
     top:50%;
     left:50%;
     transform:translate(-50%, -50%);
-    background:rgba(0,0,0,.75);
-    color:#00fff0;
-    padding:10px 18px;
+    background:rgba(0,0,0,.85);
+    color:#ffd700;
+    padding:10px 20px;
     border-radius:30px;
     font-size:.85rem;
-    letter-spacing:1px;
-    box-shadow:0 0 15px rgba(0,255,240,.6);
+    letter-spacing:1.2px;
+    box-shadow:
+        0 0 10px rgba(255,215,0,.8),
+        0 0 20px rgba(255,165,0,.9);
     z-index:5;
 }
 
