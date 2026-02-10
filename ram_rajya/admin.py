@@ -97,7 +97,18 @@ class StaffAdmin(admin.ModelAdmin):
 
 # Register the admin
 admin.site.register(Staff, StaffAdmin)
-class FreeFireTeam(admin.ModelAdmin):
+class FreeFireTeamAdmin(admin.ModelAdmin):
     list_display = ("admin_head", "guild_id")
     readonly_fields = ("guild_id",)
-admin.site.register(FreeFireTeam)
+
+    fieldsets = (
+        ("Leadership", {
+            "fields": ("admin_head", "team_elders", "team_members")
+        }),
+        ("Guild Info", {
+            "fields": ("guild_id",)
+        }),
+    )
+
+
+admin.site.register(FreeFireTeam, FreeFireTeamAdmin)
