@@ -159,7 +159,7 @@ class FreeFireTeam(models.Model):
 
     guild_id = models.CharField(
         max_length=20,
-        default="923838382",
+        default="3048559701",
         editable=False
     )
 
