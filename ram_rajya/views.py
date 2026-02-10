@@ -28,4 +28,4 @@ def staff_list(request):
 
 def free_fire(request):
     team = FreeFireTeam.objects.first()
-    return render(request, "ff.html", {"team": team})
+    return render(request, "FreeFire.html", {"team": team})
