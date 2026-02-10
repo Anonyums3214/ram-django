@@ -143,3 +143,30 @@ class Staff(models.Model):
 
     class Meta:
         db_table = 'Staff'
+        
+        # FREE FIRE GAMING SECTION
+    
+from django.db import models
+
+class FreeFireTeam(models.Model):
+    admin_head = models.CharField(max_length=200)
+    team_elders = models.TextField(
+        help_text="Separate names using · or commas"
+    )
+    team_members = models.TextField(
+        help_text="Separate names using · or commas"
+    )
+
+    guild_id = models.CharField(
+        max_length=20,
+        default="923838382",
+        editable=False
+    )
+
+    class Meta:
+        verbose_name = "Free Fire Team"
+        verbose_name_plural = "Free Fire Team"
+        db_table = "free_fire_team"
+
+    def __str__(self):
+        return "Free Fire Team Details"

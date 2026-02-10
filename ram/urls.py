@@ -31,6 +31,7 @@ urlpatterns = [
     path('head-staff/', views.head_staff, name='head_staff'),
     path('artists/', views.artist_list, name='artist_list'),
     path('staff/', views.staff_list, name='staff_list'),
+    path("free-fire/", views.free_fire , name="free_fire"),
 
 ]
 

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import UserCard,HeadStaff,ArtistCard,Staff
+from .models import UserCard,HeadStaff,ArtistCard,Staff,FreeFireTeam
 
 # Register your models here.
 class UserCardAdmin(admin.ModelAdmin):
@@ -97,3 +97,6 @@ class StaffAdmin(admin.ModelAdmin):
 
 # Register the admin
 admin.site.register(Staff, StaffAdmin)
+class FreeFireTeam(admin.ModelAdmin):
+    list_display = ("admin_head", "guild_id")
+    readonly_fields = ("guild_id",)
