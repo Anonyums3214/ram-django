@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import UserCard,HeadStaff,ArtistCard,Staff,FreeFireTeam
+from .models import UserCard,HeadStaff,ArtistCard,Staff,FreeFireTeam,RuleCategory
 
 # Register your models here.
 class UserCardAdmin(admin.ModelAdmin):
@@ -112,3 +112,9 @@ class FreeFireTeamAdmin(admin.ModelAdmin):
 
 
 admin.site.register(FreeFireTeam, FreeFireTeamAdmin)
+
+class RuleCategoryAdmin(admin.ModelAdmin):
+    list_display = ('title', 'updated_at')
+    search_fields = ('title',)
+
+admin.site.register(RuleCategory, RuleCategoryAdmin)

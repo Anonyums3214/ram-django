@@ -170,3 +170,19 @@ class FreeFireTeam(models.Model):
 
     def __str__(self):
         return "Free Fire Team Details"
+    
+class RuleCategory(models.Model):
+    CATEGORY_CHOICES = (
+        ('owner', 'Owner Rules'),
+        ('staff', 'Staff Rules'),
+        ('member', 'Member Rules'),
+    )
+
+    title = models.CharField(max_length=100, choices=CATEGORY_CHOICES)
+    description = models.TextField()
+    updated_at = models.DateTimeField(auto_now=True)
+
+    db_table= 'rules'
+
+    def __str__(self):
+        return self.get_title_display()

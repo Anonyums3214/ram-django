@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.shortcuts import render, redirect ,HttpResponse
-from .models import UserCard,HeadStaff,ArtistCard,Staff,FreeFireTeam
+from .models import UserCard,HeadStaff,ArtistCard,Staff,FreeFireTeam,RuleCategory
 # Create your views here.
 def home(request):
     return render (request,'index.html')
@@ -29,3 +29,7 @@ def staff_list(request):
 def free_fire(request):
     team = FreeFireTeam.objects.first()
     return render(request, "FreeFire.html", {"team": team})
+
+def rules(request):
+    rules = RuleCategory.objects.all()
+    return render(request, 'rules.html', {'rules': rules})

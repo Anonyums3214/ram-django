@@ -766,3 +766,60 @@ body{
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
+
+/* =========================
+   DIVINE RULES SECTION
+========================= */
+
+.divine-rules{
+    padding:120px 20px;
+    text-align:center;
+    background:
+        radial-gradient(circle at center,
+            rgba(255,215,0,0.18),
+            rgba(15,10,2,0.95) 70%),
+        linear-gradient(135deg,#120800,#1a1204,#120800);
+    position:relative;
+}
+
+.divine-title{
+    font-family:'Tiro Devanagari Hindi', serif;
+    font-size:3rem;
+    letter-spacing:4px;
+    color:#ffd700;
+    margin-bottom:15px;
+    text-shadow:
+        0 0 10px gold,
+        0 0 30px orange,
+        0 0 60px rgba(255,140,0,0.8);
+}
+
+.divine-subtitle{
+    color:#ccc;
+    margin-bottom:45px;
+    font-size:1.1rem;
+}
+
+/* BIG GOLD BUTTON */
+.divine-btn{
+    display:inline-block;
+    padding:20px 60px;
+    font-size:1.2rem;
+    font-weight:700;
+    border-radius:60px;
+    background:linear-gradient(135deg,#ffb347,#ffd700);
+    color:#000;
+    text-decoration:none;
+    box-shadow:
+        0 0 30px rgba(255,215,0,0.8),
+        0 0 60px rgba(255,165,0,0.9);
+    transition:.4s ease;
+}
+
+.divine-btn:hover{
+    transform:translateY(-6px) scale(1.05);
+    box-shadow:
+        0 0 50px rgba(255,215,0,1),
+        0 0 100px rgba(255,140,0,1);
+}
+
